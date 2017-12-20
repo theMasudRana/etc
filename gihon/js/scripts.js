@@ -56,8 +56,8 @@
 
     // TESTIMONIAL SLIDER
     $('.testimonial-wrapper').slick({
-        dots: true,
-        arrows: false,
+        dots: false,
+        arrows: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -68,17 +68,35 @@
         ]
     });
 
+    // Brand logo slider
+    var brandLogoSlider = $('.brand-logo-slider');
+    brandLogoSlider.slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 5,
+        infinite: true,
+        speed: 300,
+        autoplay: true,
+        adaptiveHeight: false,
+        responsive: [
+            { breakpoint: 991, settings: { slidesToShow: 4 } },
+            { breakpoint: 767, settings: { slidesToShow: 3 } },
+            { breakpoint: 481, settings: { slidesToShow: 2 } },
+            { breakpoint: 321, settings: { slidesToShow: 2 } },
+        ]
+    });
+
     // CounterUp
     $('.counter').counterUp({
         delay: 10,
         time: 1000
     });
 
-    // TESTIMONIAL SLIDER
+    // Main Slider
     $('.slider-wrapper').slick({
         dots: false,
         arrows: true,
-        autoPlay: true,
+        autoplay: true,
         speed: 500,
         autoPlaySpeed: 3000,
         infinite: true,
@@ -159,6 +177,9 @@
         fixedContentPos: false
     });
 
-
+    $(".sticker").sticky({
+        topSpacing:0,
+        zIndex: 999
+    });
 
 })(jQuery)
