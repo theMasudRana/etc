@@ -159,6 +159,8 @@
         fixedContentPos: false
     });
 
-
+    $('.sticky-header').sticky({
+        zIndex: 999
+    });
 
 })(jQuery)

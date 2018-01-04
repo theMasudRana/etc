@@ -1,8 +1,3 @@
-
-#ee9209
-#2C2E3E
-#6d6d6d
-
 /* -----------------------------
 Template Name: Pishon Corporate HTML5 template.
 Author: CXWebExperts
@@ -42,12 +37,12 @@ CSS Table of content
 /* -----------------------------
 1. Template default styles
 --------------------------------*/
-@import 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800|Open+Sans:300,400,600,700';
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,500,600,700');*/
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
   line-height: 24px;
 }
 .img{
@@ -77,10 +72,10 @@ a:hover {
   text-transform: capitalize;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #232332;
+  color: #3b3b42;
   font-family: "Raleway",sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   margin-top: 0;
   text-transform: uppercase;
 }
@@ -212,7 +207,16 @@ label {
   color: #ffffff;
   opacity: 0.8;
 }
-
+.btn-white {
+    background: #fff;
+    border: 1px solid transparent;
+    color: #222;
+}
+.btn-white:hover {
+    background: #2772DB;
+    color: #fff;
+    border: 1px solid transparent;
+}
 /* ------------------------------
 3. Area heading style
 ---------------------------------*/
@@ -239,12 +243,11 @@ label {
   transform: translateX(0%);
 }
 .area-title {
-  color: #232323;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 20px;
+  color: #2C2E3E;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
-
 /* -----------------------------
 4. Header area style
 -------------------------------- */
@@ -258,9 +261,6 @@ label {
 }
 .email-phone li:first-child {
   border-right: 1px solid transparent;
-}
-html {
-  display: none;
 }
 .email-phone li a {
     color: #c7c2c2;
@@ -301,42 +301,44 @@ html {
   color: #ee9209;
 }
 .logo-wrapper {
-  padding: 20px 0;
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
+    line-height: 74px;
 }
 .logo {
-  color: #434343;
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+    color: #2f2f2f;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: lowercase;
+    font-family: "Raleway",sans-serif;
 }
 .logo i {
-  color: #ee9209;
-  font-size: 30px;
-  padding-right: 10px;
+    color: #ee9209;
+    font-size: 40px;
+    padding-right: 5px;
 }
 .cx-menu ul {
   float: right;
 }
 .cx-menu ul > li {
-  float: left;
-  margin-left: 35px;
-  padding: 30px 0;
-  position: relative;
+    float: left;
+    margin-left: 35px;
+    padding: 0;
+    line-height: 80px;
+    transition: .3s;
+    position: relative;
 }
 .cx-menu ul li:last-child {
   padding-right: 0;
 }
 .cx-menu ul li a {
-  color: #777777;
-  display: block;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  z-index: 9999;
+    color: #2C2E3E;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 9999;
 }
 .cx-menu > ul li a i {
   font-weight: 700;
@@ -370,6 +372,7 @@ html {
   display: inline-block;
   margin: 0;
   padding: 0;
+  line-height: 1;
   position: relative;
   width: 100%;
 }
@@ -377,14 +380,21 @@ html {
   border-bottom: 0 none;
 }
 .cx-menu li ul li a {
-  padding: 10px 0 10px 20px;
+  padding: 15px 0 15px 15px;
+  color: #7a7a7a;
+  font-weight: 600;
+  font-size: 12px;
 }
 .cx-menu li ul li a:hover {
   background: #ee9209;
   color: #ffffff;
   display: block;
 }
-
+.header-btn {
+    text-align: right;
+    line-height: 80px;
+    transition: .3s;
+}
 /* -----------------------------
 5. Mobile menu area style
 -------------------------------- */
@@ -430,6 +440,21 @@ html {
 .mean-container .mean-nav ul li li a {
   opacity: 1;
 }
+
+/*Sticky header*/
+.is-sticky .main-header-area {
+    background: #fff;
+    box-shadow: 0 13px 35px rgba(0,0,0,0.05);
+}
+/*.is-sticky .cx-menu > ul > li,
+.is-sticky .header-btn {
+  line-height: 80px;
+}
+
+.is-sticky .logo-wrapper {
+  line-height: 70px;
+}
+*/
 
 /* -----------------------------
 6. Slider area style
@@ -654,74 +679,178 @@ html {
   padding: 150px 0;
 }
 
+
+/*About Section*/
+.about-image {
+    position: relative;
+    overflow: hidden;
+}
+.video-message {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.video-play-icon {
+  background: #ffce3e none repeat scroll 0 0;
+  border-radius: 100%;
+  color: #fff;
+  display: inline-block;
+  font-size: 45px;
+  height: 100px;
+  line-height: 105px;
+  width: 100px;
+  position: relative;
+}
+.video-play-icon i {
+  left: 5px;
+  position: relative;
+}
+.video-section {
+  padding: 200px 0;
+}
+.video-play-icon::after {
+  border-radius: 50%;
+  box-sizing: content-box;
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+.video-play-icon::after {
+  box-shadow: 0 0 0 2px rgba(255, 206, 62, 0.1);
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  top: 0;
+  transform: scale(0.9);
+  z-index: -1;
+}
+.video-play-icon:hover {
+  color: #fff;
+}
+.video-play-icon::after {
+  animation: sonarEffect 1.5s linear 2s infinite running;
+}
+
+@-webkit-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@-moz-keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+    -moz-transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 206, 62,0.1), 0 0 5px 5px rgba(255,255,255,0), 0 0 0 10px rgba(255, 255, 255,0.3);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
 /* -----------------------------
 8. Feature area style
 -------------------------------- */
 .feature-section {
-  padding: 100px 0 70px;
+    padding: 100px 0 70px;
 }
+
 .single-feature {
-  background: #ffffff none repeat scroll 0 0;
-  border: 1px solid #e5e5e5;
   margin-bottom: 30px;
-  padding: 40px 40px 35px;
-  position: relative;
-}
-.single-feature::before {
-  background: #ee9209 none repeat scroll 0 0;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.3s ease 0s;
-  width: 2px;
-}
-.single-feature:hover::before {
-  left: 0;
-  opacity: 1;
-}
-.feature-content > h5 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-}
-.feature-icon i {
-  float: left;
-  width: 25%;
-  font-size: 48px;
-}
-.feature-content i {
-  font-size: 15px;
-  margin-left: 3px;
+  box-shadow: 0px 7px 35px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  border-radius: 3px;
   transition: .3s ease-in-out 0s;
+  text-align: center;
+  background: #fff;
 }
-.single-feature .feature-content {
-  width: 75%;
-  overflow: hidden;
+.single-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
 }
-.single-feature a {
-  color: #ee9209;
-  font-family: raleway;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.feature-content a:hover i {
-  padding-left: 8px;
-}
-.single-feature-2 i {
-  float: none;
+
+.feature-icon i {
+    font-size: 40px;
 }
 .single-feature-2 .feature-content {
   width: 100%;
-  margin-top: 30px;
 }
-.single-feature-2 p {
-  margin-bottom: 30px;
+.single-feature.single-feature-2 {
+    text-align: left;
+    background: #fff;
+}
+.col-md-4:nth-child(1) .single-feature i {
+  color: #f76185;
+}
+.col-md-4:nth-child(2) .single-feature i {
+  color: #5f89f4;
+}
+.col-md-4:nth-child(3) .single-feature i {
+  color: #9bb916;
+}
+.col-md-4:nth-child(4) .single-feature i {
+  color: #a773ea;
+}
+.col-md-4:nth-child(5) .single-feature i {
+  color: #3F52E3;
+}
+.col-md-4:nth-child(6) .single-feature i {
+  color: #D02E77;
+}
+
+.feature-icon {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.feature-content h5 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.single-feature-2 .feature-content {
+    overflow: hidden;
+    padding-left: 30px;
+    width: calc(100% - 35px);
+}
+
+.single-feature-2 .feature-icon {
+    float: left;
+    width: 35px;
 }
 
 /* -----------------------------
@@ -838,22 +967,27 @@ html {
 /* -----------------------------
 10. Call to action area style
 -------------------------------- */
+.cx-section.gradient-bg {
+    background: url(img/bg/wave.svg) no-repeat center center;
+    background-size: cover;
+}
 .call-to-section {
   padding: 60px 0;
 }
 .action-heading h3 {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 0 0 10px;
-  text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #fff;
+    text-transform: capitalize;
 }
 .action-heading p {
-  color: #808080;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 28px;
-  margin-bottom: 0;
-  text-transform: unset;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 15px;
+    text-transform: unset;
 }
 .text-center .action-heading {
   margin-bottom: 20px;
@@ -1008,6 +1142,7 @@ blockquote {
   text-align: center;
   height: 100px;
   line-height: 100px;
+  transition: .3s;
 }
 .single-logo > a {
   display: block;
@@ -1075,9 +1210,14 @@ blockquote {
   vertical-align: middle;
 }
 .single-brand-logo img {
-  max-width: 120px;
-  position: relative;
-  cursor: pointer;
+    max-width: 120px;
+    position: relative;
+    cursor: pointer;
+    opacity: .5;
+    transition: .3s;
+}
+.single-brand-logo:hover img {
+    opacity: .9;
 }
 
 /* -----------------------------
@@ -1160,57 +1300,44 @@ blockquote {
 /* -----------------------------
 15. Counter area style
 -------------------------------- */
-.project-history-section {
-  background: url("img/counter/1.jpg") no-repeat center center / cover;
-  position: relative;
-}
-.project-history-section::before {
-  background: rgba(0,0,0,0.5);
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+.single-project-history {
+    padding: 0 30px;
 }
 .project-icon {
-  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  height: 136px;
-  line-height: 176px;
-  width: 135px;
-  position: relative;
-  margin: auto;
-  transition: all 0.3s ease 0s;
+    background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    height: 135px;
+    line-height: 160px;
+    width: 135px;
+    position: relative;
+    margin: auto;
+    transition: all 0.3s ease 0s;
 }
 .single-project-history:hover .project-icon {
   background: #ee9209;
   border: 1px solid transparent;
 }
 .project-icon::before {
-  background: #ee9209 none repeat scroll 0 0;
+  background: #f76185 none repeat scroll 0 0;
   content: "";
   height: 1px;
   left: 100%;
   position: absolute;
   top: 50%;
   transform: translateX(50%);
-  width: 70px;
-}
-.project-history-section .col-md-3:last-child .project-icon::before {
-  display: none;
+  width: 120px;
 }
 .project-icon i {
-  color: #fff;
-  font-size: 60px;
+  font-size: 40px;
+  color: #f76185;
+  transition: .3s;
 }
 .project-icon p {
-  background: #ee9209 none repeat scroll 0 0;
+  background: #f76185 none repeat scroll 0 0;
   border: 1px solid #fff;
+  color: #fff;
   border-radius: 50%;
-  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   height: 50px;
@@ -1222,14 +1349,20 @@ blockquote {
   width: 50px;
 }
 .single-project-history h5 {
-  color: #ffffff;
-  display: inline-block;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  margin-top: 35px;
-  text-transform: capitalize;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 35px;
+    text-transform: capitalize;
+    font-size: 22px;
 }
+.col-md-4:last-child .project-icon::before {
+  display: none;
+}
+.single-project-history:hover .project-icon i {
+  color: #fff;
+}
+
+
 
 /* -----------------------------
 16. Subscribe area style
@@ -1359,110 +1492,72 @@ blockquote {
   float: right;
 }
 
-/*----------------------------------------------
-20. Blog post style
-------------------------------------------------*/
+/* -----------------------------
+19. Blog area style
+-------------------------------- */
+.blog-post {
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}
 .post-thumbnail {
   position: relative;
+  overflow: hidden;
 }
 .post-thumbnail img {
+  transition: all 0.3s linear 0s;
   width: 100%;
 }
-.post-content {
-  background: #fff none repeat scroll 0 0;
-  padding: 30px 0 0;
-}
-.post-content h3 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.meta-info a {
-  color: #232323;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.meta-info a {
-  color: #808080;
-  font-size: 12px;
-}
-.meta-info {
-  margin-bottom: 25px;
-  overflow: hidden;
-}
-.meta-info > li {
-  float: left;
-  line-height: 1;
-  margin-right: 25px;
-}
-.meta-info > li:last-child {
-  margin: 0;
-}
-.meta-info > li i {
-  font-size: 14px;
-  margin-right: 10px;
-}
-.post-content p {
-  font-weight: 400;
-}
-.blog-post + .blog-post {
-  margin-top: 50px;
-}
-.post-title-list {
-  margin-bottom: 30px;
-  padding-left: 15px;
-}
-.post-title-list li {
-  position: relative;
-  margin-bottom: 6px;
-  padding-left: 18px;
-  font-size: 14px;
-}
-.post-title-list li::before {
-  background: #e1e1e1;
+.post-thumbnail::before {
+  background: rgba(0,0,0,0.5);
   content: "";
+  position: absolute;
   left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 7px;
-  width: 7px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
 }
-.post-content h4 {
-  font-weight: 500;
-  text-transform: capitalize;
+.blog-post:hover .post-thumbnail::before {
+  opacity: 1;
 }
-.post-content h4 + p {
-  margin-bottom: 0;
+.post-content {
+  overflow: hidden;
+  padding: 30px;
 }
-.post-content blockquote {
-  background: #f8f8f8;
-  color: #555;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 500;
-  margin: 35px 0 35px 15px;
-  padding: 50px;
-  border-left: 4px solid;
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: capitalize;
+    margin-bottom: 10px;
 }
-.post-content blockquote p:first-of-type::before {
-  content: "“";
-  display: inline-block;
-  font-size: 43px;
-  height: 20px;
-  left: -30px;
-  position: absolute;
-  top: -10px;
-  width: 20px;
+.post-title a:hover {
+  color: #03bb84;
 }
-.post-content blockquote p:first-of-type {
-  position: relative;
+.post-content .event-meta {
+  margin-bottom: 10px;
 }
+.blog-post:nth-child(n+2) {
+  margin-top: 30px;
+}
+.post-date {
+    margin-bottom: 10px;
+}
+.post-date li {
+  margin-right: 15px;
+}
+.post-date li a {
+    color: #8e8a8a;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.post-date li i {
+    padding-right: 10px;
+}
+
 
 /* -----------------------------
 21. Single Project area style
