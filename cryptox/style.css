@@ -491,7 +491,7 @@ label {
 
 .xboot-menu li ul {
   background: #ffffff;
-  border-left: 2px solid #ee9209;
+  border-top: 2px solid #ee9209;
   box-shadow: 0 1px 2px rgba(86, 86, 90, 0.4);
   float: none;
   position: absolute;
@@ -501,14 +501,12 @@ label {
   opacity: 0;
   visibility: hidden;
   z-index: 9999;
-  transform: scale(0.9);
   transition: all 0.3s ease 0s;
 }
 
 .xboot-menu ul li:hover>ul {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
 }
 
 .xboot-menu li ul li {
@@ -1360,10 +1358,6 @@ label {
   height: auto;
   width: 100%;
 }
-
-.team-section-2 .single-team-member {
-  margin-bottom: 30px;
-}
 .member-content {
   text-align: center;
   transition: all 0.3s ease-in-out 0s;
@@ -1400,9 +1394,7 @@ label {
   display: inline-block;
   margin: 0 5px;
 }
-
 .member-bookmark li a {
-  background: transparent none repeat scroll 0 0;
   color: #ee9209;
   display: block;
   font-size: 22px;
@@ -1419,6 +1411,35 @@ label {
   transform: translateY(-50%);
 }
 
+.team-style-2 .member-bookmark {
+  position: static;
+  opacity: 1;
+  transition: .3s ease-in-out;
+  margin-top: 15px;
+  border-top: 1px solid transparent;
+  padding: 10px;
+  background: #da870c;
+}
+.team-style-2 .member-bookmark li a {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+}
+.team-style-2 .member-content {
+  background: #EE9209;
+  padding: 15px 0 0 0;
+  overflow: hidden;
+}
+
+.single-team-member.team-style-2:hover .member-thumbnail::before {
+  opacity: 0;
+}
+.single-team-member.team-style-2:hover .member-bookmark {
+  transform: none;
+}
+.team-style-2 .member-bookmark a:hover {
+  color: #232323;
+}
 /* ----------------------------- 15. Process style -------------------------------- */
 
 .process-box {
