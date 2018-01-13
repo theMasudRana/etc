@@ -387,7 +387,9 @@ label {
 .header-top-area {
   background: #343d47;
 }
-
+.header-top-2.header-top-area {
+  border-bottom: 2px solid #EE9209;
+}
 .email-phone li {
   border-left: 1px solid #565656;
   border-right: 1px solid #565656;

@@ -151,8 +151,8 @@ function hexToRgb(e){var a=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(a,func
  ------------------------------------------ */
 
 (function(g,d){"function"===typeof define&&define.amd?define([],d):"object"===typeof module&&module.exports?module.exports=d():g.Rellax=d()})(this,function(){var g=function(d,l){var b=Object.create(g.prototype),h=0,p=0,k=0,q=0,f=[],t=!1,y=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(a){setTimeout(a,1E3/60)},z=window.transformProp||function(){var a=document.createElement("div");if(null==a.style.transform){var c=["Webkit","Moz","ms"],b;for(b in c)if(void 0!==a.style[c[b]+"Transform"])return c[b]+"Transform"}return"transform"}(),r=function(a,b,e){return a<=b?b:a>=e?e:a};b.options={speed:-2,center:!1,round:!0,vertical:!0,horizontal:!1,callback:function(){}};l&&Object.keys(l).forEach(function(a){b.options[a]=l[a]});b.options.speed=r(b.options.speed,-10,10);d||(d=".rellax");var u=document.querySelectorAll(d);if(0<u.length)b.elems=u;else throw Error("The elements you're trying to select don't exist.");var A=function(a){var c=a.getAttribute("data-rellax-percentage"),e=a.getAttribute("data-rellax-speed"),f=a.getAttribute("data-rellax-zindex")||0,d=b.options.vertical?c||b.options.center?window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop:0:0,m=b.options.horizontal?c||b.options.center?window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft:0:0,g=d+a.getBoundingClientRect().top,h=a.clientHeight||a.offsetHeight||a.scrollHeight,k=m+a.getBoundingClientRect().left, l=a.clientWidth||a.offsetWidth||a.scrollWidth;d=c?c:(d-g+p)/(h+p);var n=c?c:(m-k+q)/(l+q);b.options.center&&(d=n=.5);m=e?r(e,-10,10):b.options.speed;if(c||b.options.center)m=r(e||b.options.speed,-5,5);c=v(n,d,m);a=a.style.cssText;e="";0<=a.indexOf("transform")&&(e=a.indexOf("transform"),e=a.slice(e),e=(d=e.indexOf(";"))?" "+e.slice(11,d).replace(/\s/g,""):" "+e.slice(11).replace(/\s/g,""));return{baseX:c.x,baseY:c.y,top:g,left:k,height:h,width:l,speed:m,style:a,transform:e,zindex:f}},w=function(){var a= h,c=k;h=void 0!==window.pageYOffset?window.pageYOffset:(document.documentElement||document.body.parentNode||document.body).scrollTop;k=void 0!==window.pageXOffset?window.pageXOffset:(document.documentElement||document.body.parentNode||document.body).scrollLeft;return a!=h&&b.options.vertical||c!=k&&b.options.horizontal?!0:!1},v=function(a,c,e){var d={};a=100*e*(1-a);c=100*e*(1-c);d.x=b.options.round?Math.round(a):Math.round(100*a)/100;d.y=b.options.round?Math.round(c):Math.round(100*c)/100;return d}, x=function(){w()&&!1===t&&n();y(x)},n=function(){for(var a=0;a<b.elems.length;a++){var c=v((k-f[a].left+q)/(f[a].width+q),(h-f[a].top+p)/(f[a].height+p),f[a].speed),e=c.y-f[a].baseY,d=c.x-f[a].baseX;b.elems[a].style[z]="translate3d("+(b.options.horizontal?d:"0")+"px,"+(b.options.vertical?e:"0")+"px,"+f[a].zindex+"px) "+f[a].transform}b.options.callback(c)};b.destroy=function(){for(var a=0;a<b.elems.length;a++)b.elems[a].style.cssText=f[a].style;t=!0};(function(){p=window.innerHeight;q=window.innerWidth;w();for(var a=0;a<b.elems.length;a++){var c=A(b.elems[a]);f.push(c)}window.addEventListener("resize",function(){n()});x();n()})();return b};return g});
-
-
+// mailchimp Form
+(function($){"use strict";$.ajaxChimp={responses:{"We have sent you a confirmation email":0,"Please enter a value":1,"An email address must contain a single @":2,"The domain portion of the email address is invalid (the portion after the @: )":3,"The username portion of the email address is invalid (the portion before the @: )":4,"This email address looks fake or invalid. Please enter a real email address":5},translations:{en:null},init:function(selector,options){$(selector).ajaxChimp(options)}};$.fn.ajaxChimp=function(options){$(this).each(function(i,elem){var form=$(elem);var email=form.find("input[type=email]");var label=form.find("label[for="+email.attr("id")+"]");var settings=$.extend({url:form.attr("action"),language:"en"},options);var url=settings.url.replace("/post?","/post-json?").concat("&c=?");form.attr("novalidate","true");email.attr("name","EMAIL");form.submit(function(){var msg;function successCallback(resp){if(resp.result==="success"){msg="We have sent you a confirmation email";label.removeClass("error").addClass("valid");email.removeClass("error").addClass("valid")}else{email.removeClass("valid").addClass("error");label.removeClass("valid").addClass("error");var index=-1;try{var parts=resp.msg.split(" - ",2);if(parts[1]===undefined){msg=resp.msg}else{var i=parseInt(parts[0],10);if(i.toString()===parts[0]){index=parts[0];msg=parts[1]}else{index=-1;msg=resp.msg}}}catch(e){index=-1;msg=resp.msg}}if(settings.language!=="en"&&$.ajaxChimp.responses[msg]!==undefined&&$.ajaxChimp.translations&&$.ajaxChimp.translations[settings.language]&&$.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]){msg=$.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]}label.html(msg);label.show(2e3);if(settings.callback){settings.callback(resp)}}var data={};var dataArray=form.serializeArray();$.each(dataArray,function(index,item){data[item.name]=item.value});$.ajax({url:url,data:data,success:successCallback,dataType:"jsonp",error:function(resp,text){console.log("mailchimp ajax submit error: "+text)}});var submitMsg="Submitting...";if(settings.language!=="en"&&$.ajaxChimp.translations&&$.ajaxChimp.translations[settings.language]&&$.ajaxChimp.translations[settings.language]["submit"]){submitMsg=$.ajaxChimp.translations[settings.language]["submit"]}label.html(submitMsg).show(2e3);return false})});return this}})(jQuery);
 /*!
 * jQuery meanMenu v2.0.8
 * @Copyright (C) 2012-2014 Chris Wharton @ MeanThemes (https://github.com/meanthemes/meanMenu)
@@ -179,265 +179,7 @@ function hexToRgb(e){var a=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(a,func
 * Find more information at http://www.meanthemes.com/plugins/meanmenu/
 *
 */
-(function ($) {
-    "use strict";
-        $.fn.meanmenu = function (options) {
-                var defaults = {
-                        meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
-                        meanMenuContainer: '.mobile-menu-area', // Choose where meanmenu will be placed within the HTML
-                        meanMenuClose: "X", // single character you want to represent the close menu button
-                        meanMenuCloseSize: "18px", // set font size of close button
-                        meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
-                        meanRevealPosition: "right", // left right or center positions
-                        meanRevealPositionDistance: "0", // Tweak the position of the menu
-                        meanRevealColour: "", // override CSS colours for the reveal background
-                        meanScreenWidth: "1170", // set the screen width you want meanmenu to kick in at
-                        meanNavPush: "", // set a height here in px, em or % if you want to budge your layout now the navigation is missing.
-                        meanShowChildren: true, // true to show children in the menu, false to hide them
-                        meanExpandableChildren: true, // true to allow expand/collapse children
-                        meanExpand: "+", // single character you want to represent the expand for ULs
-                        meanContract: "-", // single character you want to represent the contract for ULs
-                        meanRemoveAttrs: false, // true to remove classes and IDs, false to keep them
-                        onePage: false, // set to true for one page sites
-                        meanDisplay: "block", // override display method for table cell based layouts e.g. table-cell
-                        removeElements: "" // set to hide page elements
-                };
-                options = $.extend(defaults, options);
-
-                // get browser width
-                var currentWidth = window.innerWidth || document.documentElement.clientWidth;
-
-                return this.each(function () {
-                        var meanMenu = options.meanMenuTarget;
-                        var meanContainer = options.meanMenuContainer;
-                        var meanMenuClose = options.meanMenuClose;
-                        var meanMenuCloseSize = options.meanMenuCloseSize;
-                        var meanMenuOpen = options.meanMenuOpen;
-                        var meanRevealPosition = options.meanRevealPosition;
-                        var meanRevealPositionDistance = options.meanRevealPositionDistance;
-                        var meanRevealColour = options.meanRevealColour;
-                        var meanScreenWidth = options.meanScreenWidth;
-                        var meanNavPush = options.meanNavPush;
-                        var meanRevealClass = ".meanmenu-reveal";
-                        var meanShowChildren = options.meanShowChildren;
-                        var meanExpandableChildren = options.meanExpandableChildren;
-                        var meanExpand = options.meanExpand;
-                        var meanContract = options.meanContract;
-                        var meanRemoveAttrs = options.meanRemoveAttrs;
-                        var onePage = options.onePage;
-                        var meanDisplay = options.meanDisplay;
-                        var removeElements = options.removeElements;
-
-                        //detect known mobile/tablet usage
-                        var isMobile = false;
-                        if ( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/Blackberry/i)) || (navigator.userAgent.match(/Windows Phone/i)) ) {
-                                isMobile = true;
-                        }
-
-                        if ( (navigator.userAgent.match(/MSIE 8/i)) || (navigator.userAgent.match(/MSIE 7/i)) ) {
-                            // add scrollbar for IE7 & 8 to stop breaking resize function on small content sites
-                                jQuery('html').css("overflow-y" , "scroll");
-                        }
-
-                        var meanRevealPos = "";
-                        var meanCentered = function() {
-                            if (meanRevealPosition === "center") {
-                                var newWidth = window.innerWidth || document.documentElement.clientWidth;
-                                var meanCenter = ( (newWidth/2)-22 )+"px";
-                                meanRevealPos = "left:" + meanCenter + ";right:auto;";
-
-                                if (!isMobile) {
-                                    jQuery('.meanmenu-reveal').css("left",meanCenter);
-                                } else {
-                                    jQuery('.meanmenu-reveal').animate({
-                                            left: meanCenter
-                                    });
-                                }
-                            }
-                        };
-
-                        var menuOn = false;
-                        var meanMenuExist = false;
-
-
-                        if (meanRevealPosition === "right") {
-                                meanRevealPos = "right:" + meanRevealPositionDistance + ";left:auto;";
-                        }
-                        if (meanRevealPosition === "left") {
-                                meanRevealPos = "left:" + meanRevealPositionDistance + ";right:auto;";
-                        }
-                        // run center function
-                        meanCentered();
-
-                        // set all styles for mean-reveal
-                        var $navreveal = "";
-
-                        var meanInner = function() {
-                                // get last class name
-                                if (jQuery($navreveal).is(".meanmenu-reveal.meanclose")) {
-                                        $navreveal.html(meanMenuClose);
-                                } else {
-                                        $navreveal.html(meanMenuOpen);
-                                }
-                        };
-
-                        // re-instate original nav (and call this on window.width functions)
-                        var meanOriginal = function() {
-                            jQuery('.mean-bar,.mean-push').remove();
-                            jQuery(meanContainer).removeClass("mean-container");
-                            jQuery(meanMenu).css('display', meanDisplay);
-                            menuOn = false;
-                            meanMenuExist = false;
-                            jQuery(removeElements).removeClass('mean-remove');
-                        };
-
-                        // navigation reveal
-                        var showMeanMenu = function() {
-                                var meanStyles = "background:"+meanRevealColour+";color:"+meanRevealColour+";"+meanRevealPos;
-                                if (currentWidth <= meanScreenWidth) {
-                                jQuery(removeElements).addClass('mean-remove');
-                                    meanMenuExist = true;
-                                    // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
-                                    jQuery(meanContainer).addClass("mean-container");
-                                    jQuery('.mean-container').prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="'+meanStyles+'">Show Navigation</a><nav class="mean-nav"></nav></div>');
-
-                                    //push meanMenu navigation into .mean-nav
-                                    var meanMenuContents = jQuery(meanMenu).html();
-                                    jQuery('.mean-nav').html(meanMenuContents);
-
-                                    // remove all classes from EVERYTHING inside meanmenu nav
-                                    if(meanRemoveAttrs) {
-                                        jQuery('nav.mean-nav ul, nav.mean-nav ul *').each(function() {
-                                            // First check if this has mean-remove class
-                                            if (jQuery(this).is('.mean-remove')) {
-                                                jQuery(this).attr('class', 'mean-remove');
-                                            } else {
-                                                jQuery(this).removeAttr("class");
-                                            }
-                                            jQuery(this).removeAttr("id");
-                                        });
-                                    }
-
-                                    // push in a holder div (this can be used if removal of nav is causing layout issues)
-                                    jQuery(meanMenu).before('<div class="mean-push" />');
-                                    jQuery('.mean-push').css("margin-top",meanNavPush);
-
-                                    // hide current navigation and reveal mean nav link
-                                    jQuery(meanMenu).hide();
-                                    jQuery(".meanmenu-reveal").show();
-
-                                    // turn 'X' on or off
-                                    jQuery(meanRevealClass).html(meanMenuOpen);
-                                    $navreveal = jQuery(meanRevealClass);
-
-                                    //hide mean-nav ul
-                                    jQuery('.mean-nav ul').hide();
-
-                                    // hide sub nav
-                                    if(meanShowChildren) {
-                                            // allow expandable sub nav(s)
-                                            if(meanExpandableChildren){
-                                                jQuery('.mean-nav ul ul').each(function() {
-                                                        if(jQuery(this).children().length){
-                                                                jQuery(this,'li:first').parent().append('<a class="mean-expand" href="#" style="font-size: '+ meanMenuCloseSize +'">'+ meanExpand +'</a>');
-                                                        }
-                                                });
-                                                jQuery('.mean-expand').on("click",function(e){
-                                                        e.preventDefault();
-                                                            if (jQuery(this).hasClass("mean-clicked")) {
-                                                                    jQuery(this).text(meanExpand);
-                                                                jQuery(this).prev('ul').slideUp(300, function(){});
-                                                        } else {
-                                                                jQuery(this).text(meanContract);
-                                                                jQuery(this).prev('ul').slideDown(300, function(){});
-                                                        }
-                                                        jQuery(this).toggleClass("mean-clicked");
-                                                });
-                                            } else {
-                                                    jQuery('.mean-nav ul ul').show();
-                                            }
-                                    } else {
-                                            jQuery('.mean-nav ul ul').hide();
-                                    }
-
-                                    // add last class to tidy up borders
-                                    jQuery('.mean-nav ul li').last().addClass('mean-last');
-                                    $navreveal.removeClass("meanclose");
-                                    jQuery($navreveal).click(function(e){
-                                        e.preventDefault();
-                                if( menuOn === false ) {
-                                                $navreveal.css("text-align", "center");
-                                                $navreveal.css("text-indent", "0");
-                                                $navreveal.css("font-size", meanMenuCloseSize);
-                                                jQuery('.mean-nav ul:first').slideDown();
-                                                menuOn = true;
-                                        } else {
-                                            jQuery('.mean-nav ul:first').slideUp();
-                                            menuOn = false;
-                                        }
-                                            $navreveal.toggleClass("meanclose");
-                                            meanInner();
-                                            jQuery(removeElements).addClass('mean-remove');
-                                    });
-
-                                    // for one page websites, reset all variables...
-                                    if ( onePage ) {
-                                        jQuery('.mean-nav ul > li > a:first-child').on( "click" , function () {
-                                            jQuery('.mean-nav ul:first').slideUp();
-                                            menuOn = false;
-                                            jQuery($navreveal).toggleClass("meanclose").html(meanMenuOpen);
-                                        });
-                                    }
-                            } else {
-                                meanOriginal();
-                            }
-                        };
-
-                        if (!isMobile) {
-                                // reset menu on resize above meanScreenWidth
-                                jQuery(window).resize(function () {
-                                        currentWidth = window.innerWidth || document.documentElement.clientWidth;
-                                        if (currentWidth > meanScreenWidth) {
-                                                meanOriginal();
-                                        } else {
-                                            meanOriginal();
-                                        }
-                                        if (currentWidth <= meanScreenWidth) {
-                                                showMeanMenu();
-                                                meanCentered();
-                                        } else {
-                                            meanOriginal();
-                                        }
-                                });
-                        }
-
-                    jQuery(window).resize(function () {
-                                // get browser width
-                                currentWidth = window.innerWidth || document.documentElement.clientWidth;
-
-                                if (!isMobile) {
-                                        meanOriginal();
-                                        if (currentWidth <= meanScreenWidth) {
-                                                showMeanMenu();
-                                                meanCentered();
-                                        }
-                                } else {
-                                        meanCentered();
-                                        if (currentWidth <= meanScreenWidth) {
-                                                if (meanMenuExist === false) {
-                                                        showMeanMenu();
-                                                }
-                                        } else {
-                                                meanOriginal();
-                                        }
-                                }
-                        });
-
-                    // run main menuMenu function on load
-                    showMeanMenu();
-                });
-        };
-})(jQuery);
+!function(e){"use strict";e.fn.meanmenu=function(n){var a={meanMenuTarget:jQuery(this),meanMenuContainer:".mobile-menu-area",meanMenuClose:"X",meanMenuCloseSize:"18px",meanMenuOpen:"<span /><span /><span />",meanRevealPosition:"right",meanRevealPositionDistance:"0",meanRevealColour:"",meanScreenWidth:"1170",meanNavPush:"",meanShowChildren:!0,meanExpandableChildren:!0,meanExpand:"+",meanContract:"-",meanRemoveAttrs:!1,onePage:!1,meanDisplay:"block",removeElements:""};n=e.extend(a,n);var t=window.innerWidth||document.documentElement.clientWidth;return this.each(function(){var e=n.meanMenuTarget,a=n.meanMenuContainer,r=n.meanMenuClose,i=n.meanMenuCloseSize,u=n.meanMenuOpen,m=n.meanRevealPosition,s=n.meanRevealPositionDistance,l=n.meanRevealColour,o=n.meanScreenWidth,c=n.meanNavPush,h=".meanmenu-reveal",v=n.meanShowChildren,d=n.meanExpandableChildren,y=n.meanExpand,j=n.meanContract,Q=n.meanRemoveAttrs,f=n.onePage,g=n.meanDisplay,p=n.removeElements,C=!1;(navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/Blackberry/i)||navigator.userAgent.match(/Windows Phone/i))&&(C=!0),(navigator.userAgent.match(/MSIE 8/i)||navigator.userAgent.match(/MSIE 7/i))&&jQuery("html").css("overflow-y","scroll");var w="",x=function(){if("center"===m){var e=window.innerWidth||document.documentElement.clientWidth,n=e/2-22+"px";w="left:"+n+";right:auto;",C?jQuery(".meanmenu-reveal").animate({left:n}):jQuery(".meanmenu-reveal").css("left",n)}},A=!1,E=!1;"right"===m&&(w="right:"+s+";left:auto;"),"left"===m&&(w="left:"+s+";right:auto;"),x();var M="",P=function(){jQuery(M).is(".meanmenu-reveal.meanclose")?M.html(r):M.html(u)},W=function(){jQuery(".mean-bar,.mean-push").remove(),jQuery(a).removeClass("mean-container"),jQuery(e).css("display",g),A=!1,E=!1,jQuery(p).removeClass("mean-remove")},b=function(){var n="background:"+l+";color:"+l+";"+w;if(o>=t){jQuery(p).addClass("mean-remove"),E=!0,jQuery(a).addClass("mean-container"),jQuery(".mean-container").prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="'+n+'">Show Navigation</a><nav class="mean-nav"></nav></div>');var r=jQuery(e).html();jQuery(".mean-nav").html(r),Q&&jQuery("nav.mean-nav ul, nav.mean-nav ul *").each(function(){jQuery(this).is(".mean-remove")?jQuery(this).attr("class","mean-remove"):jQuery(this).removeAttr("class"),jQuery(this).removeAttr("id")}),jQuery(e).before('<div class="mean-push" />'),jQuery(".mean-push").css("margin-top",c),jQuery(e).hide(),jQuery(".meanmenu-reveal").show(),jQuery(h).html(u),M=jQuery(h),jQuery(".mean-nav ul").hide(),v?d?(jQuery(".mean-nav ul ul").each(function(){jQuery(this).children().length&&jQuery(this,"li:first").parent().append('<a class="mean-expand" href="#" style="font-size: '+i+'">'+y+"</a>")}),jQuery(".mean-expand").on("click",function(e){e.preventDefault(),jQuery(this).hasClass("mean-clicked")?(jQuery(this).text(y),jQuery(this).prev("ul").slideUp(300,function(){})):(jQuery(this).text(j),jQuery(this).prev("ul").slideDown(300,function(){})),jQuery(this).toggleClass("mean-clicked")})):jQuery(".mean-nav ul ul").show():jQuery(".mean-nav ul ul").hide(),jQuery(".mean-nav ul li").last().addClass("mean-last"),M.removeClass("meanclose"),jQuery(M).click(function(e){e.preventDefault(),A===!1?(M.css("text-align","center"),M.css("text-indent","0"),M.css("font-size",i),jQuery(".mean-nav ul:first").slideDown(),A=!0):(jQuery(".mean-nav ul:first").slideUp(),A=!1),M.toggleClass("meanclose"),P(),jQuery(p).addClass("mean-remove")}),f&&jQuery(".mean-nav ul > li > a:first-child").on("click",function(){jQuery(".mean-nav ul:first").slideUp(),A=!1,jQuery(M).toggleClass("meanclose").html(u)})}else W()};C||jQuery(window).resize(function(){t=window.innerWidth||document.documentElement.clientWidth,t>o,W(),o>=t?(b(),x()):W()}),jQuery(window).resize(function(){t=window.innerWidth||document.documentElement.clientWidth,C?(x(),o>=t?E===!1&&b():W()):(W(),o>=t&&(b(),x()))}),b()})}}(jQuery);
 
 
 
@@ -490,6 +232,37 @@ function hexToRgb(e){var a=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(a,func
                 }
             });
     });
+
+
+    // mailchimp start
+    if ($('.subscription-form').length > 0) {
+        /*  MAILCHIMP  */
+        $('.subscription-form').ajaxChimp({
+            language: 'en',
+            callback: mailchimpCallback,
+            url: "https://masudrana.us14.list-manage.com/subscribe/post?u=bbaf30c9498959598e94abea6&amp;id=ea892eba33" 
+            //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+        });
+    }
+
+    function mailchimpCallback(resp) {
+        if (resp.result === 'success') {
+            $('.subscription-success').html('<i class="fa fa-check"></i><br/>' + resp.msg).fadeIn(1000);
+            $('.subscription-error').fadeOut(500);
+        } else if (resp.result === 'error') {
+            $('.subscription-error').html('<i class="fa fa-times"></i><br/>' + resp.msg).fadeIn(1000);           
+        }
+    }
+    $.ajaxChimp.translations.en = {
+        'submit': 'Submitting...',
+        0: 'We have sent you a confirmation email',
+        1: 'Please enter a value',
+        2: 'An email address must contain a single @',
+        3: 'The domain portion of the email address is invalid (the portion after the @: )',
+        4: 'The username portion of the email address is invalid (the portion before the @: )',
+        5: 'This email address looks fake or invalid. Please enter a real email address'
+    };
+
 
 })(jQuery);
 

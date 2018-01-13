@@ -105,7 +105,14 @@
         responsive: [
             { breakpoint: 991, settings: { slidesToShow: 1 } },
             { breakpoint: 767, settings: { slidesToShow: 1 } },
-            { breakpoint: 479, settings: { slidesToShow: 1 } },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                }
+            },
         ]
     });
 
@@ -124,7 +131,14 @@
             { breakpoint: 991, settings: { slidesToShow: 4 } },
             { breakpoint: 767, settings: { slidesToShow: 3 } },
             { breakpoint: 481, settings: { slidesToShow: 2 } },
-            { breakpoint: 321, settings: { slidesToShow: 2 } },
+            {
+                breakpoint: 321,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                }
+            },
         ]
     });
 
@@ -145,7 +159,10 @@
             autoplay: false,
             autoplaySpeed: 10000,
             dots: false,
-            fade: true
+            fade: true,
+            responsive: [
+                { breakpoint: 767, settings: { dots: false, arrows: false } }
+            ]
         });
 
         function doAnimations(elements) {
@@ -165,7 +182,7 @@
         }
     }
     mainSlider();
-    
+
     /*-------------------------------------------
       10. Scroll to top button
     ---------------------------------------------*/
