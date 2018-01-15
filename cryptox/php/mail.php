@@ -10,7 +10,7 @@
 		$from = stripslashes($_POST['name'])."<".stripslashes($_POST['email']).">";
 
 		// Recipient Email Address 
-		$to = 'envato@xbootwebexperts.com'; 
+		$to = 'envato.xboot@gmail.com'; 
 
 		// Email Header 
 		$headers = "From: $from\r\n" .
