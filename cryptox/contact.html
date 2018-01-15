@@ -18,11 +18,23 @@
 </head>
 
 <body>
+    <!-- xBoot loader start -->
+    <div id="xboot-loader">
+        <div class="loader-wrapper">
+            <div class="loader-content">
+                <div class="loader-dot dot-four"></div>
+                <div class="loader-dot dot-three"></div>
+                <div class="loader-dot dot-two"></div>
+                <div class="loader-dot dot-one"></div>
+            </div>
+        </div>
+    </div>
+    <!-- xBoot loader End -->    
     <!-- Main wrapper start -->
     <div class="wrapper">
         <!-- Header area start -->
         <header class="header-area">
-            <div class="header-top-area">
+            <div class="header-top-area header-top-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-md-8">
@@ -35,12 +47,9 @@
                         </div>
                         <div class="col-sm-4 col-md-4">
                             <div class="header-top-right">
-                                <ul class="header-social-menu">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <ul class="user-area">
+                                    <li><a href="#"><i class="fa fa-user user-icon"></i>Login <i class="fa fa-caret-down"></i></i></a></li>
+                                    <li><a href="#"><i class="fa fa-edit user-icon"></i>Sign Up <i class="fa fa-caret-down"></i></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -50,42 +59,44 @@
             <div class="main-header-area sticky-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
                             <div class="logo-wrapper">
                                 <a class="logo" href="index.html"><img src="img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-md-7 hidden-xs hidden-sm">
+                        <div class="col-lg-7 col-md-8 hidden-xs hidden-sm">
                             <nav class="xboot-menu">
                                 <ul class="main-menu">
-                                    <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">Home<i class="fa fa-caret-down"></i></i></a>
                                         <ul>
-                                            <li><a href="index.html">cryptox - home 1</a></li>
-                                            <li><a href="index-2.html">cryptox - home 2</a></li>
-                                            <li><a href="index-3.html">cryptox - home 3</a></li>
+                                            <li><a href="index.html"><i class="fa fa-caret-right"></i> cryptox - home 1</a></li>
+                                            <li><a href="index-2.html"><i class="fa fa-caret-right"></i> cryptox - home 2</a></li>
+                                            <li><a href="index-3.html"><i class="fa fa-caret-right"></i> cryptox - home 3</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="about.html">Service</a></li>
-                                    <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
+                                            <li><a href="about.html"><i class="fa fa-caret-right"></i>About Us</a></li>
+                                            <li><a href="contact.html"><i class="fa fa-caret-right"></i>contact Us</a></li>
+                                            <li><a href="services.html"><i class="fa fa-caret-right"></i>cryptox Service</a></li>
+                                            <li><a href="single-services.html"><i class="fa fa-caret-right"></i>Single Service</a></li>
+                                            <li><a href="team.html"><i class="fa fa-caret-right"></i>cryptox team</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">blog<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                            <li><a href="single-post.html">single blog post</a></li>
+                                            <li><a href="blog-left-sidebar.html"><i class="fa fa-caret-right"></i> blog left sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html"><i class="fa fa-caret-right"></i> blog right sidebar</a></li>
+                                            <li><a href="single-post.html"><i class="fa fa-caret-right"></i> single blog post</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
                             <div class="header-btn">
                                 <a href="#" class="button">GET A Quote</a>
                             </div>
@@ -99,15 +110,17 @@
                                             <li><a href="index.html">cryptox - home 1</a></li>
                                             <li><a href="index-2.html">cryptox - home 2</a></li>
                                             <li><a href="index-3.html">cryptox - home 3</a></li>
-                                            <li><a href="index-4.html">cryptox - home 4</a></li>
-                                            <li><a href="index-5.html">cryptox - home 5</a></li>
-                                            <li><a href="index-6.html">cryptox - home 6</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">portfolio</a>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages</a>
                                         <ul>
-                                            <li><a href="portfolio.html">portfolio</a></li>
-                                            <li><a href="single-protfolio.html">single portfolio</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">contact Us</a></li>
+                                            <li><a href="services.html">cryptox Service</a></li>
+                                            <li><a href="single-services.html">Single Service</a></li>
+                                            <li><a href="team.html">cryptox team</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">blog</a>
@@ -117,14 +130,6 @@
                                             <li><a href="single-post.html">single blog post</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">pages</a>
-                                        <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
@@ -161,7 +166,7 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-lg-10 col-md-12">
                                     <div class="area-heading area-heading-2 text-left">
                                         <h2 class="area-title">Get In Touch</h2>
                                         <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
@@ -204,24 +209,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-contact-option">
-                                <i class="bi bi-map-pointer"></i>
-                                <h4>address street</h4>
-                                <p>address : 12/80 Main Street </p>
-                                <p>New York, USA</p>
-                            </div>
-                            <div class="single-contact-option">
-                                <i class="bi bi-mobile"></i>
-                                <h4>mobile phone</h4>
-                                <p>phone : +1044 668 18 00</p>
-                                <p>phone : +1344 668 18 00</p>
-                            </div>
-                            <div class="single-contact-option">
-                                <i class="bi bi-envelop"></i>
-                                <h4>address email</h4>
-                                <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
-                                <a href="mailto:admin@yourdomain.com">yourname@yourdomain.com</a>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="contact-option-wrapper">
+                                <div class="single-contact-option">
+                                    <i class="bi bi-map-pointer"></i>
+                                    <h4>address street</h4>
+                                    <p>address : 12/80 Main Street </p>
+                                    <p>New York, USA</p>
+                                </div>
+                                <div class="single-contact-option">
+                                    <i class="bi bi-mobile"></i>
+                                    <h4>mobile phone</h4>
+                                    <p>phone : +1044 668 18 00</p>
+                                    <p>phone : +1344 668 18 00</p>
+                                </div>
+                                <div class="single-contact-option">
+                                    <i class="bi bi-envelop"></i>
+                                    <h4>address email</h4>
+                                    <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                                    <a href="mailto:admin@yourdomain.com">yourname@yourdomain.com</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -358,12 +365,12 @@
             <div class="footer-bottom-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-4 col-sm-12">
                             <div class="footer-copyright-info">
                                 <p>All copyright &copy; 2018 by <a href="http://www.wpfreethemeshop.com/" target="_blank">xBoot</a></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8 col-sm-12">
                             <div class="footer-bottom-menu">
                                 <ul class="footer-main-menu">
                                     <li>

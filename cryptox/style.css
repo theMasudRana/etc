@@ -381,6 +381,10 @@ label {
     font-weight: 500;
     font-size: 15px;
 }
+.title-white.area-heading:after {
+  background: #fff;
+  box-shadow: 10px 0px 0px 0px #fff;
+}
 
 /* ----------------------------- 4. Header area style -------------------------------- */
 
@@ -392,7 +396,6 @@ label {
 }
 .email-phone li {
   border-left: 1px solid #565656;
-  border-right: 1px solid #565656;
   float: left;
 }
 
@@ -446,7 +449,35 @@ label {
 .header-social-menu li a:hover {
   color: #ee9209;
 }
-
+.user-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 38px;
+}
+.user-area li {
+  margin-right: 15px;
+  border-right: 1px solid #565656;
+  padding-right: 15px;
+}
+.user-area li:last-child {
+  margin-right: 0;
+}
+.user-area li a {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.user-area li a:hover {
+  color: #ee9209;
+}
+.user-icon {
+    margin-right: 10px;
+    color: #EE9209;
+}
+/*Menu*/
 .logo-wrapper {
   position: relative;
   z-index: 9999;
@@ -484,9 +515,19 @@ label {
   font-weight: 700;
   padding-left: 5px;
 }
+.xboot-menu li > ul > li a > i {
+  padding: 0;
+  color: #EE9209;
+  margin-right: 8px;
+}
 
-.xboot-menu ul li:hover>a {
+.xboot-menu ul li:hover > a {
   color: #ee9209;
+}
+
+.xboot-menu ul ul li:hover > a {
+  color: #ee9209;
+  padding-left: 20px;
 }
 
 .xboot-menu li ul {
@@ -1352,11 +1393,13 @@ label {
 
 .member-thumbnail {
   position: relative;
+  overflow: hidden;
 }
 
 .member-thumbnail img {
   height: auto;
   width: 100%;
+  transition: all 0.3s ease-in-out 0s;
 }
 .member-content {
   text-align: center;
@@ -1439,6 +1482,9 @@ label {
 }
 .team-style-2 .member-bookmark a:hover {
   color: #232323;
+}
+.team-style-2:hover .member-thumbnail img {
+  transform: scale3d(1.1, 1.1,1.1 );
 }
 /* ----------------------------- 15. Process style -------------------------------- */
 
@@ -1740,12 +1786,6 @@ label {
 
 
 /* ----------------------------- 19. Blog area style -------------------------------- */
-
-.blog-post {
-  background: #fff none repeat scroll 0 0;
-  box-shadow: 0 13px 35px rgba(0, 0, 0, 0.05);
-}
-
 .post-thumbnail {
   position: relative;
   overflow: hidden;
@@ -1757,7 +1797,7 @@ label {
 }
 .post-content {
   overflow: hidden;
-  padding: 30px;
+  padding: 30px 0 0;
 }
 .post-title {
   font-size: 20px;
@@ -1839,7 +1879,7 @@ label {
   font-weight: 500;
   margin: 35px 0 35px 15px;
   padding: 50px;
-  border-left: 4px solid;
+  border-left: 4px solid #EE9209;
 }
 
 .single-service-content blockquote p:first-of-type {
@@ -2211,7 +2251,6 @@ label {
     line-height: 1;
     margin: 0;
     text-transform: capitalize;
-    color: #5d5b59;
 }
 
 .col-md-3:nth-child(1) .single-counter i {
@@ -2316,16 +2355,15 @@ label {
 }
 
 .tags li a {
-  border: 1px solid #3e3b3b;
-  border-radius: 2px;
-  color: #bdbdbd;
-  display: block;
-  font-size: 13px;
-  letter-spacing: 1px;
-  padding: 5px 13px;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: 500;
+    border: 1px solid #3e3b3b;
+    border-radius: 2px;
+    color: #bdbdbd;
+    display: block;
+    font-size: 14px;
+    padding: 5px 13px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
 }
 
 .tags li a:hover {
@@ -2381,11 +2419,11 @@ label {
 
 .footer-copyright-info p {
     color: #bdbdbd;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     margin: 0;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 
 .footer-copyright-info p a {
@@ -2413,7 +2451,7 @@ label {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .footer-main-menu li a:hover {
@@ -2464,5 +2502,21 @@ label {
 
 
 
-
-
+/*cryptonatorwidget*/
+.cryptonatorwidget table td {
+  padding: 10px;
+}
+.cryptonatorwidget input,
+.cryptonatorwidget select {
+    padding: 0 20px;
+    height: 40px !important;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.cryptonatorwidget > div:last-child {
+    display: none;
+}
+.currency-calculator h2 {
+    color: #fff;
+}

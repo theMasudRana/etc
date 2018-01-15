@@ -18,11 +18,23 @@
 </head>
 
 <body>
+    <!-- xBoot loader start -->
+    <div id="xboot-loader">
+        <div class="loader-wrapper">
+            <div class="loader-content">
+                <div class="loader-dot dot-four"></div>
+                <div class="loader-dot dot-three"></div>
+                <div class="loader-dot dot-two"></div>
+                <div class="loader-dot dot-one"></div>
+            </div>
+        </div>
+    </div>
+    <!-- xBoot loader End -->
     <!-- Main wrapper start -->
     <div class="wrapper">
         <!-- Header area start -->
         <header class="header-area">
-            <div class="header-top-area">
+            <div class="header-top-area header-top-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-md-8">
@@ -35,12 +47,9 @@
                         </div>
                         <div class="col-sm-4 col-md-4">
                             <div class="header-top-right">
-                                <ul class="header-social-menu">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <ul class="user-area">
+                                    <li><a href="#"><i class="fa fa-user user-icon"></i>Login <i class="fa fa-caret-down"></i></i></a></li>
+                                    <li><a href="#"><i class="fa fa-edit user-icon"></i>Sign Up <i class="fa fa-caret-down"></i></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -50,42 +59,44 @@
             <div class="main-header-area sticky-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
                             <div class="logo-wrapper">
                                 <a class="logo" href="index.html"><img src="img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-md-7 hidden-xs hidden-sm">
+                        <div class="col-lg-7 col-md-8 hidden-xs hidden-sm">
                             <nav class="xboot-menu">
                                 <ul class="main-menu">
-                                    <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">Home<i class="fa fa-caret-down"></i></i></a>
                                         <ul>
-                                            <li><a href="index.html">cryptox - home 1</a></li>
-                                            <li><a href="index-2.html">cryptox - home 2</a></li>
-                                            <li><a href="index-3.html">cryptox - home 3</a></li>
+                                            <li><a href="index.html"><i class="fa fa-caret-right"></i> cryptox - home 1</a></li>
+                                            <li><a href="index-2.html"><i class="fa fa-caret-right"></i> cryptox - home 2</a></li>
+                                            <li><a href="index-3.html"><i class="fa fa-caret-right"></i> cryptox - home 3</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="about.html">Service</a></li>
-                                    <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
+                                            <li><a href="about.html"><i class="fa fa-caret-right"></i>About Us</a></li>
+                                            <li><a href="contact.html"><i class="fa fa-caret-right"></i>contact Us</a></li>
+                                            <li><a href="services.html"><i class="fa fa-caret-right"></i>cryptox Service</a></li>
+                                            <li><a href="single-services.html"><i class="fa fa-caret-right"></i>Single Service</a></li>
+                                            <li><a href="team.html"><i class="fa fa-caret-right"></i>cryptox team</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">blog<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                            <li><a href="single-post.html">single blog post</a></li>
+                                            <li><a href="blog-left-sidebar.html"><i class="fa fa-caret-right"></i> blog left sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html"><i class="fa fa-caret-right"></i> blog right sidebar</a></li>
+                                            <li><a href="single-post.html"><i class="fa fa-caret-right"></i> single blog post</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
                             <div class="header-btn">
                                 <a href="#" class="button">GET A Quote</a>
                             </div>
@@ -99,15 +110,17 @@
                                             <li><a href="index.html">cryptox - home 1</a></li>
                                             <li><a href="index-2.html">cryptox - home 2</a></li>
                                             <li><a href="index-3.html">cryptox - home 3</a></li>
-                                            <li><a href="index-4.html">cryptox - home 4</a></li>
-                                            <li><a href="index-5.html">cryptox - home 5</a></li>
-                                            <li><a href="index-6.html">cryptox - home 6</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">portfolio</a>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages</a>
                                         <ul>
-                                            <li><a href="portfolio.html">portfolio</a></li>
-                                            <li><a href="single-protfolio.html">single portfolio</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">contact Us</a></li>
+                                            <li><a href="services.html">cryptox Service</a></li>
+                                            <li><a href="single-services.html">Single Service</a></li>
+                                            <li><a href="team.html">cryptox team</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">blog</a>
@@ -117,14 +130,6 @@
                                             <li><a href="single-post.html">single blog post</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">pages</a>
-                                        <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
@@ -161,7 +166,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="area-heading text-center">
-                                <h2 class="area-title">Cryptox Services</h2>
+                                <h2 class="area-title">Why Choose Bitcoin</h2>
                                 <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
                             </div>
                         </div>
@@ -173,7 +178,7 @@
                                     <img src="img/services/1.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Bitcoin Transaction</h4>
+                                    <h4>Safe and Secure</h4>
                                     <p>Lorem ipsum dolor sit amet, adipisicing elit. Impedit consequuntur expedita inventore atque maiores quisquam, sint ratione quibusdam! </p>
                                 </div>
                             </div>
@@ -184,8 +189,8 @@
                                     <img src="img/services/2.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Bitcoin Exchange</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non corporis saepe sed earum molestiae quisquam nobis blanditiis cumque adipisicing? </p>
+                                    <h4>Mobile App</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non corporis saepe sed earum quisquam nobis blanditiis cumque adipisicing? </p>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +200,7 @@
                                     <img src="img/services/3.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Bitcoin Investment</h4>
+                                    <h4>Secure Wallet</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorum veniam, odit facilis saepe. Sapiente alias, quaerat recusandae. </p>
                                 </div>
                             </div>
@@ -206,7 +211,7 @@
                                     <img src="img/services/4.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Bitcoin Escrow Service</h4>
+                                    <h4>Covered By Insurance</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et odio eum itaque, facere aperiam magni impedit est perspiciatis. </p>
                                 </div>
                             </div>
@@ -217,7 +222,7 @@
                                     <img src="img/services/5.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Bitcoin Mining</h4>
+                                    <h4>Recurring Buying</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque inventore quae quas fugit iste dicta distinctio, sapiente vitae. </p>
                                 </div>
                             </div>
@@ -228,7 +233,7 @@
                                     <img src="img/services/6.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Software Development</h4>
+                                    <h4>Instant Exchange</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque inventore quae quas fugit iste dicta distinctio, sapiente vitae. </p>
                                 </div>
                             </div>
@@ -236,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <!-- template section end -->            
+            <!-- template section end -->
             <!-- xboot team section start -->
             <div class="xboot-section team-section">
                 <div class="container">
@@ -249,57 +254,75 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.2s">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.2s">
                                 <div class="member-thumbnail">
-                                    <img src="img/team/team1.png" class="center-block img-responsive" alt="">
-                                    <ul class="member-bookmark">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>                                    
+                                    <img src="img/team/team1.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="member-content">
                                     <h4>Maddy Bowen</h4>
                                     <p>ceo & Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.4s">
-                                <div class="member-thumbnail">
-                                    <img src="img/team/team2.png" class="center-block img-responsive" alt="">
                                     <ul class="member-bookmark">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>                                    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team2.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="member-content">
                                     <h4>dany archer</h4>
                                     <p>Developer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 hidden-sm">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.6s">
-                                <div class="member-thumbnail">
-                                    <img src="img/team/team3.png" class="center-block img-responsive" alt="">
                                     <ul class="member-bookmark">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>                                    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.6s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team4.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="member-content">
                                     <h4>solomon vandy</h4>
-                                    <p>Designer</p>
+                                    <p>Programmer</p>
+                                    <ul class="member-bookmark">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.8s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team3.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="member-content">
+                                    <h4>Jack Dawson</h4>
+                                    <p>UI/UX Designer</p>
+                                    <ul class="member-bookmark">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -307,6 +330,94 @@
                 </div>
             </div>
             <!-- xboot team section end -->
+            <!-- xboot section start -->
+            <div class="feature-section gray-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="area-heading text-center">
+                                <h2 class="area-title">Cryptox Services</h2>
+                                <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/1.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bitcoin Transaction</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/2.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bitcoin Exchange</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/3.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bitcoin Investment</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/4.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bitcoin Escrow Service</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/5.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Bitcoin Mining</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-feature feature-style-2">
+                                <div class="feature-icon">
+                                    <img src="img/services/line/6.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Development</h5>
+                                    <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
+                                    <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- xboot section end -->
             <!-- Counter section started -->
             <div class="xboot-section bg-2 gradient-2">
                 <div class="container">
@@ -358,110 +469,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Counter section started end -->            
-            <!-- testimonial area start -->
-            <div class="xboot-section testimonial-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="area-heading text-center">
-                                <h2 class="area-title">our testimonial</h2>
-                                <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="testimonial-wrapper navigation-one text-center">
-                                <div class="single-testimonial">
-                                    <blockquote>
-                                        <img src="img/avatar/1.jpg" alt="" class="client-image">
-                                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. laborum, cumque, quibusdam. soluta voluptates accusantium molestiae beatae eius quod pariatur placeat.</p>
-                                        <p class="client-name">john doe <span class="designation">ceo microsoft</span></p>
-                                    </blockquote>
-                                </div>
-                                <div class="single-testimonial">
-                                    <blockquote>
-                                        <img src="img/avatar/4.jpg" alt="" class="client-image">
-                                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. laborum, cumque, quibusdam. soluta voluptates accusantium molestiae beatae eius quod pariatur placeat.</p>
-                                        <p class="client-name">john doe <span class="designation">ceo microsoft</span></p>
-                                    </blockquote>
-                                </div>
-                                <div class="single-testimonial">
-                                    <blockquote>
-                                        <img src="img/avatar/2.jpg" alt="" class="client-image">
-                                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. laborum, cumque, quibusdam. soluta voluptates accusantium molestiae beatae eius quod pariatur placeat.</p>
-                                        <p class="client-name">john doe <span class="designation">ceo microsoft</span></p>
-                                    </blockquote>
-                                </div>
-                                <div class="single-testimonial">
-                                    <blockquote>
-                                        <img src="img/avatar/3.jpg" alt="" class="client-image">
-                                        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. laborum, cumque, quibusdam. soluta voluptates accusantium molestiae beatae eius quod pariatur placeat.</p>
-                                        <p class="client-name">john doe <span class="designation">ceo microsoft</span></p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="brand-logo-slider pt-70 text-center">
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/1.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/2.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/3.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/4.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/5.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/6.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-brand">
-                                    <div class="single-brand-outer">
-                                        <div class="single-brand-inner">
-                                            <img src="img/brand/4.png" alt="" class="img-responsive center-block">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- testimonial area end -->                       
+            <!-- Counter section started end -->
             <!-- xboot pricing table section start -->
             <div class="xboot-section gray-bg">
                 <div class="container">
@@ -742,12 +750,12 @@
             <div class="footer-bottom-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-4 col-sm-12">
                             <div class="footer-copyright-info">
                                 <p>All copyright &copy; 2018 by <a href="http://www.wpfreethemeshop.com/" target="_blank">xBoot</a></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8 col-sm-12">
                             <div class="footer-bottom-menu">
                                 <ul class="footer-main-menu">
                                     <li>

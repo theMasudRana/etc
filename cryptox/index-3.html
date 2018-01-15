@@ -18,11 +18,23 @@
 </head>
 
 <body>
+    <!-- xBoot loader start -->
+    <div id="xboot-loader">
+        <div class="loader-wrapper">
+            <div class="loader-content">
+                <div class="loader-dot dot-four"></div>
+                <div class="loader-dot dot-three"></div>
+                <div class="loader-dot dot-two"></div>
+                <div class="loader-dot dot-one"></div>
+            </div>
+        </div>
+    </div>
+    <!-- xBoot loader End -->    
     <!-- Main wrapper start -->
     <div class="wrapper">
         <!-- Header area start -->
         <header class="header-area">
-            <div class="header-top-area">
+            <div class="header-top-area header-top-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-md-8">
@@ -50,42 +62,44 @@
             <div class="main-header-area sticky-header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
                             <div class="logo-wrapper">
                                 <a class="logo" href="index.html"><img src="img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-md-7 hidden-xs hidden-sm">
+                        <div class="col-lg-7 col-md-8 hidden-xs hidden-sm">
                             <nav class="xboot-menu">
                                 <ul class="main-menu">
-                                    <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">Home<i class="fa fa-caret-down"></i></i></a>
                                         <ul>
-                                            <li><a href="index.html">cryptox - home 1</a></li>
-                                            <li><a href="index-2.html">cryptox - home 2</a></li>
-                                            <li><a href="index-3.html">cryptox - home 3</a></li>
+                                            <li><a href="index.html"><i class="fa fa-caret-right"></i> cryptox - home 1</a></li>
+                                            <li><a href="index-2.html"><i class="fa fa-caret-right"></i> cryptox - home 2</a></li>
+                                            <li><a href="index-3.html"><i class="fa fa-caret-right"></i> cryptox - home 3</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="about.html">Service</a></li>
-                                    <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
+                                            <li><a href="about.html"><i class="fa fa-caret-right"></i>About Us</a></li>
+                                            <li><a href="contact.html"><i class="fa fa-caret-right"></i>contact Us</a></li>
+                                            <li><a href="services.html"><i class="fa fa-caret-right"></i>cryptox Service</a></li>
+                                            <li><a href="single-services.html"><i class="fa fa-caret-right"></i>Single Service</a></li>
+                                            <li><a href="team.html"><i class="fa fa-caret-right"></i>cryptox team</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">blog<i class="fa fa-caret-down"></i></a>
                                         <ul>
-                                            <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                                            <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                            <li><a href="single-post.html">single blog post</a></li>
+                                            <li><a href="blog-left-sidebar.html"><i class="fa fa-caret-right"></i> blog left sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html"><i class="fa fa-caret-right"></i> blog right sidebar</a></li>
+                                            <li><a href="single-post.html"><i class="fa fa-caret-right"></i> single blog post</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
                             <div class="header-btn">
                                 <a href="#" class="button">GET A Quote</a>
                             </div>
@@ -99,15 +113,17 @@
                                             <li><a href="index.html">cryptox - home 1</a></li>
                                             <li><a href="index-2.html">cryptox - home 2</a></li>
                                             <li><a href="index-3.html">cryptox - home 3</a></li>
-                                            <li><a href="index-4.html">cryptox - home 4</a></li>
-                                            <li><a href="index-5.html">cryptox - home 5</a></li>
-                                            <li><a href="index-6.html">cryptox - home 6</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">portfolio</a>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Service</a></li>
+                                    <li><a href="#">pages</a>
                                         <ul>
-                                            <li><a href="portfolio.html">portfolio</a></li>
-                                            <li><a href="single-protfolio.html">single portfolio</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">contact Us</a></li>
+                                            <li><a href="services.html">cryptox Service</a></li>
+                                            <li><a href="single-services.html">Single Service</a></li>
+                                            <li><a href="team.html">cryptox team</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">blog</a>
@@ -117,14 +133,6 @@
                                             <li><a href="single-post.html">single blog post</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">pages</a>
-                                        <ul>
-                                            <li><a href="about.html">About cryptox</a></li>
-                                            <li><a href="contact.html">contact Us</a></li>
-                                            <li><a href="team.html">cryptox team</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
@@ -136,29 +144,12 @@
         </header>
         <!-- Header area end -->
         <!-- Slider area start -->
-        <div class="slider-area">
+        <div class="slider-area clearfix">
             <div id="xboot-slider">
                 <div class="xboot-single-slide" style="background-image: url('img/slider/3.jpg');">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="slide-content-wrapper">
-                                    <div class="slide-content text-left">
-                                        <h3 class="slide-subtitle" data-animation="fadeInLeft" data-delay="0.5s">Welcome</h3>
-                                        <h2 class="slide-title" data-animation="fadeIn" data-delay="1.5s">start mining <span class="colored-text">Bitcoin</span>.</h2>
-                                        <p class="slide-description" data-animation="fadeIn" data-delay="2.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et modi at, quidem
-                                            <br> eveniet eos itaque. At fuga quas dignissimos earum.</p>
-                                        <a href="#" class="button" data-animation="fadeInLeft" data-delay="3s">Start Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="xboot-single-slide" style="background-image: url('img/slider/1.jpg');">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8">
                                 <div class="slide-content-wrapper">
                                     <div class="slide-content text-left">
                                         <h3 class="slide-subtitle" data-animation="fadeInLeft" data-delay="0.5s">Welcome</h3>
@@ -191,8 +182,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="xboot-single-slide" style="background-image: url('img/slider/3.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-content text-left">
+                                        <h3 class="slide-subtitle" data-animation="fadeInLeft" data-delay="0.5s">Welcome</h3>
+                                        <h2 class="slide-title" data-animation="fadeIn" data-delay="1.5s">start mining <span class="colored-text">Bitcoin</span>.</h2>
+                                        <p class="slide-description" data-animation="fadeIn" data-delay="2.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et modi at, quidem
+                                            <br> eveniet eos itaque. At fuga quas dignissimos earum.</p>
+                                        <a href="#" class="button" data-animation="fadeInLeft" data-delay="3s">Start Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>        
         <!-- Slider area end -->
         <!-- Page content area start -->
         <section class="content">
@@ -225,7 +233,7 @@
                 </div>
             </div>
             <!-- Intro section end -->
-            <!-- xboot project section start -->
+            <!-- xboot section start -->
             <div class="xboot-section gray-bg">
                 <div class="container">
                     <div class="row">
@@ -237,7 +245,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="process-box wow fadeIn" data-wow-delay=".2s">
                                 <div class="process-icon">
                                     <i class="bi bi-anchor"></i>
@@ -247,7 +255,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quia quidem culpa sed commodi tenetur sunt</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="process-box wow fadeIn" data-wow-delay=".4s">
                                 <div class="process-icon">
                                     <i class="bi bi-chair1"></i>
@@ -257,7 +265,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quia quidem culpa sed commodi tenetur sunt</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-sm-4">
                             <div class="process-box wow fadeIn" data-wow-delay=".6s">
                                 <div class="process-icon">
                                     <i class="bi bi-cup-coffee"></i>
@@ -270,9 +278,34 @@
                     </div>
                 </div>
             </div>
-            <!-- xboot project section end -->
+            <!-- xboot section end -->
+            <!-- Intro section end -->
+            <div class="xboot-section colored-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="area-heading text-center title-white ">
+                                <h2 class="area-title">Cryptocurrency Calculator</h2>
+                                <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="currency-calculator text-center">
+                                <script type="text/javascript">
+                                crypt_calc_border_width = 0;
+                                crypt_calc_font_family = "Tahoma";
+                                </script>
+                                <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/calc_widget.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- xboot section start -->            
             <!-- xboot section start -->
-            <div class="feature-section white-bg">
+            <div class="feature-section gray-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -283,7 +316,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/1.png" class="img-responsive" alt="">
@@ -295,7 +328,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/2.png" class="img-responsive" alt="">
@@ -307,7 +340,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/3.png" class="img-responsive" alt="">
@@ -319,7 +352,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/4.png" class="img-responsive" alt="">
@@ -331,7 +364,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/5.png" class="img-responsive" alt="">
@@ -343,13 +376,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="single-feature feature-style-2">
                                 <div class="feature-icon">
                                     <img src="img/services/line/6.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h5>Software Development</h5>
+                                    <h5>Development</h5>
                                     <p>Construct mockups or production-ready pages in-browser with Variant Page Builder — Included FREE with every license purchase. </p>
                                     <a href="#" class="button">learn more <i class="fa fa-angle-right"></i></a>
                                 </div>
@@ -360,7 +393,7 @@
             </div>
             <!-- xboot section end -->            
             <!-- xboot portfolio section start -->
-            <div class="portfolio-section xboot-section gray-bg">
+            <div class="portfolio-section xboot-section white-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -510,28 +543,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.2s">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.2s">
                                 <div class="member-thumbnail">
-                                    <img src="img/team/team1.png" class="center-block img-responsive" alt="">
-                                    <ul class="member-bookmark">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
+                                    <img src="img/team/team1.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="member-content">
                                     <h4>Maddy Bowen</h4>
                                     <p>ceo & Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.4s">
-                                <div class="member-thumbnail">
-                                    <img src="img/team/team2.png" class="center-block img-responsive" alt="">
                                     <ul class="member-bookmark">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -539,17 +558,17 @@
                                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team2.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="member-content">
                                     <h4>dany archer</h4>
                                     <p>Developer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 hidden-sm">
-                            <div class="single-team-member wow fadeIn" data-wow-delay="0.6s">
-                                <div class="member-thumbnail">
-                                    <img src="img/team/team3.png" class="center-block img-responsive" alt="">
                                     <ul class="member-bookmark">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -558,9 +577,41 @@
                                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.6s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team4.png" class="img-responsive" alt="">
+                                </div>
                                 <div class="member-content">
                                     <h4>solomon vandy</h4>
-                                    <p>Designer</p>
+                                    <p>Programmer</p>
+                                    <ul class="member-bookmark">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 hidden-md col-sm-6">
+                            <div class="single-team-member team-style-2 wow fadeIn" data-wow-delay="0.8s">
+                                <div class="member-thumbnail">
+                                    <img src="img/team/team3.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="member-content">
+                                    <h4>Jack Dawson</h4>
+                                    <p>UI/UX Designer</p>
+                                    <ul class="member-bookmark">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -727,7 +778,7 @@
             <div class="xboot-section blog-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-6 col-md-12">
                             <div class="area-heading area-heading-2 text-left">
                                 <h2 class="area-title">News & Events</h2>
                                 <p>Maecenas ut lectus a ipsum gravida ornare. Cras scelerisque in mauris id pretium. Praesent convallis neque quis erat lobortis gravida id et dolor.</p>
@@ -781,7 +832,7 @@
                                         <li><a href="#"><i class="fa fa-calendar"></i>07 Aug</a></li>
                                         <li><a href="#"><i class="fa fa-flag"></i>Bitcoin</a></li>
                                     </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio doloremque dolor tempore aperiam, atque consequatur nesciunt quis voluptatibus dolore, omnis.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio doloremque dolor tempore aperiam, atque nesciunt quis voluptatibus dolore, omnis.</p>
                                     <a class="button" href="#">learn more</a>
                                 </div>
                             </article>
@@ -917,12 +968,12 @@
             <div class="footer-bottom-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-4 col-sm-12">
                             <div class="footer-copyright-info">
                                 <p>All copyright &copy; 2018 by <a href="http://www.wpfreethemeshop.com/" target="_blank">xBoot</a></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8 col-sm-12">
                             <div class="footer-bottom-menu">
                                 <ul class="footer-main-menu">
                                     <li>
